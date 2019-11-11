@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta http-equiv="Content-type" content="text/html;
+ charset=utf-8">
+ <meta name="viewport" id="viewport"
+ content="width=device-width, height=device-height,
+ initial-scale=1.0, maximum-scale=1.0,
+ user-scalable=no;" />
+ <script type="text/javascript" charset="utf-8"
+ src="phonegap.js"></script>
+ <script type="text/javascript" charset="utf-8">
+ function onBodyLoad() {
+ document.addEventListener("deviceready", onDeviceReady,
+ false);
+ }
+ function onDeviceReady() {
+ //Get the appInfo DOM element
+ var element = document.getElementById('appInfo');
+ //replace it with specific information about the device
+ //running the application
+ element.innerHTML = 'PhoneGap (version ' +
+ device.phonegap + ')<br />' + device.platform + ' ' +
+ device.name + ' (version ' + device.version + ').';
+ }
+ </script>
+ </head>
+ <body onload="onBodyLoad()">
+ <h1>HolaMundo3</h1>
+ <p>Está es una aplicación PhoneGap que llama a las API's de PhoneGap.</p>
+ <p id="appInfo">Esperando a la inicialización de la aplicación a completarse.</p>
+ </body>
+</html>
