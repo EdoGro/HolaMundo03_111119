@@ -19,10 +19,10 @@
  var element = document.getElementById('appInfo');
  //replace it with specific information about the device
  //running the application
- element.innerHTML = 'PhoneGap (version ' +
- device.phonegap + ')<br />' + device.platform + ' ' +
- device.name + ' (version ' + device.version + ').';
- }
+ element.innerHTML = 'PhoneGap: ( versión '     + device.phonegap     + ')<br />' + 
+                            'Device Platform: (' + device.platform + ')<br />' +  
+                            'Device Version: ('  + device.version  + ')<br />';
+    }
  </script>
  </head>
  <body onload="onBodyLoad()">
